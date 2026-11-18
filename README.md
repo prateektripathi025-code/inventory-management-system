@@ -63,3 +63,4 @@ location.reload();
 ## Notes for a college submission
 
 This is intentionally backend-free. For a production deployment, replace the LocalStorage data layer with a REST API and a database, hash passwords server-side, add role-based access control, and add server-side validation/auditing.
+🌐 [Live Demo – Open Inventory Management System](https://prateektripathi025-code.github.io/inventory-management-system/)
