@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockFlow — Inventory Management</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="toast-container" aria-live="polite"></div>
+
+  <section id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="brand-mark">SF</div>
+      <h1>StockFlow</h1>
+      <p>Inventory Management System</p>
+      <form id="login-form" novalidate>
+        <label>Username<input id="login-username" name="username" autocomplete="username" required /></label>
+        <label>Password<input id="login-password" name="password" type="password" autocomplete="current-password" required /></label>
+        <div id="login-error" class="form-error"></div>
+        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      <small>Demo login: <b>admin</b> / <b>admin123</b></small>
+    </div>
+  </section>
+
+  <section id="app-shell" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><span class="brand-mark small">SF</span><div><b>StockFlow</b><small>Inventory Suite</small></div></div>
+      <nav id="main-nav">
+        <button class="nav-item active" data-view="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-item" data-view="products"><span>◫</span> Products</button>
+        <button class="nav-item" data-view="sales"><span>↗</span> Sales</button>
+        <button class="nav-item" data-view="purchases"><span>↙</span> Purchases</button>
+        <button class="nav-item" data-view="suppliers"><span>♙</span> Suppliers</button>
+        <button class="nav-item" data-view="categories"><span>◈</span> Categories</button>
+        <button class="nav-item" data-view="reports"><span>▤</span> Reports</button>
+      </nav>
+      <div class="sidebar-footer"><button id="logout-btn" class="nav-item"><span>⇥</span> Logout</button></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button id="mobile-menu" class="icon-btn" aria-label="Menu">☰</button>
+        <div><h2 id="page-title">Dashboard</h2><p id="page-subtitle">Overview of your inventory</p></div>
+        <div class="topbar-actions"><span class="date-chip" id="current-date"></span><div class="avatar">A</div></div>
+      </header>
+      <div id="view-container" class="view-container"></div>
+    </main>
+  </section>
+
+  <div id="modal-root"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
